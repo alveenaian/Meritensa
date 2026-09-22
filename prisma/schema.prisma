@@ -1,0 +1,578 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================
+// AUTHENTICATION
+// ============================================
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  emailVerified DateTime?
+  passwordHash  String?
+  name          String?
+  image         String?
+  phone         String?
+
+  // Password reset
+  passwordResetToken      String?
+  passwordResetExpiresAt  DateTime?
+
+  // Profile info
+  state         String?
+  city          String?
+
+  // Role
+  role          UserRole  @default(PLAINTIFF)
+
+  // Timestamps
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  // Relations
+  sessions      Session[]
+  accounts      Account[]
+  cases         Case[]
+  featureUnlocks UserFeatureUnlock[]
+
+  @@map("users")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sessions")
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@map("accounts")
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+  @@map("verification_tokens")
+}
+
+enum UserRole {
+  PLAINTIFF
+  ADMIN
+}
+
+// ============================================
+// CASE MANAGEMENT
+// ============================================
+
+model Case {
+  id              String      @id @default(cuid())
+  userId          String
+
+  // Basic Info
+  title           String
+  caseType        CaseType
+  status          CaseStatus  @default(INTAKE)
+
+  // Core Case Data (kept for backwards compatibility and quick access)
+  defendantName   String?
+  defendantType   DefendantType?
+  incidentDate    DateTime?
+  incidentState   String?
+  state           String?     // Jurisdiction
+  federalCourt    Boolean     @default(false)
+
+  // Damages (kept for quick access and scoring)
+  estimatedDamages    Float?
+  damagesDescription  String?   @db.Text
+
+  // Scoring (kept for quick access)
+  overallScore    Float?
+  evidenceScore   Float?
+  liabilityScore  Float?
+  damagesScore    Float?
+  collectability  Float?
+  solRisk         SolRiskLevel?
+  solDeadline     DateTime?
+
+  // Referral
+  referralRequested   Boolean   @default(false)
+  referralRequestedAt DateTime?
+  referralStatus      ReferralStatus?
+  referralNotes       String?   @db.Text
+
+  // Funding
+  fundingRequested    Boolean   @default(false)
+  fundingRequestedAt  DateTime?
+  fundingStatus       FundingStatus?
+  fundingNotes        String?   @db.Text
+
+  // Timestamps
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+  intakeCompletedAt DateTime?
+  analyzedAt      DateTime?
+  analysisError   String?     @db.Text
+
+  // Case Stage Flow
+  stage           CaseStage   @default(CONVERSATION)
+
+  // Conversation Stage Fields
+  narrativeSummary      String?     @db.Text
+  narrativeConfirmedAt  DateTime?
+  userIntent            String?
+  needsNewSummary       Boolean     @default(false)
+  clarificationCount    Int         @default(0)
+  preliminaryAssessment String?     @db.Text
+
+  // CONSOLIDATED: All detailed intake form data in one JSON field
+  // Replaces: defendantState, defendantAddress, incidentEndDate, isOngoing, discoveryDate,
+  // damagesTotal, damagesEconomic, damagesLostWages, damagesLostBusiness, damagesOther, damagesNotes,
+  // hasWrittenAgreement, agreementDate, agreementType, agreementNotes, hasArbitrationClause,
+  // hasVenueClause, hasNonCompete, evidenceTypes, hasWitnesses, witnessCount, priorAttorneyContact,
+  // priorCourtFiling, priorLegalNotes, plaintiffPhone, hasCurrentAttorney, currentAttorneyInfo,
+  // feePreference, awareOfDeadlines, deadlineNotes
+  intakeFormData  Json?
+
+  // CONSOLIDATED: All AI-generated analysis outputs in one JSON field
+  // Replaces: generatedSummary, generatedTimeline, generatedDamagesMemo, generatedCausesOfAction,
+  // generatedEvidenceInventory, generatedScore, generatedRedFlags, generatedRecommendations
+  analysisResults Json?
+
+  // Attorney-Ready Packet: Deep adversarial analysis for law firm review
+  proAnalysisResults Json?
+
+  // Legacy field for backwards compatibility (AI-generated summary)
+  summary         String?     @db.Text
+
+  // Relations
+  user            User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  messages        Message[]
+  documents       Document[]
+  causesOfAction  CauseOfAction[]
+  adminComments   AdminComment[]
+
+  @@index([userId])
+  @@index([status])
+  @@index([caseType])
+  @@index([overallScore])
+  @@map("cases")
+}
+
+enum CaseType {
+  BREACH_OF_CONTRACT
+  FRAUD
+  EMPLOYMENT
+  PERSONAL_INJURY
+  IP_THEFT
+  PARTNERSHIP_DISPUTE
+  OTHER
+}
+
+enum CaseStage {
+  CONVERSATION
+  INTAKE
+  EVIDENCE
+  ANALYSIS
+  COMPLETE
+}
+
+enum CaseStatus {
+  INTAKE
+  INTAKE_COMPLETE
+  UNDER_REVIEW
+  REFERRAL_PENDING
+  REFERRED
+  CLOSED
+}
+
+enum DefendantType {
+  INDIVIDUAL
+  SMALL_BUSINESS
+  CORPORATION
+  GOVERNMENT
+  OTHER
+}
+
+enum SolRiskLevel {
+  LOW
+  MEDIUM
+  HIGH
+  CRITICAL
+  EXPIRED
+}
+
+enum ReferralStatus {
+  REQUESTED
+  UNDER_REVIEW
+  MATCHED
+  ACCEPTED
+  DECLINED
+}
+
+enum FundingStatus {
+  REQUESTED
+  UNDER_REVIEW
+  APPROVED
+  DECLINED
+}
+
+enum AccessType {
+  FREE
+  REFERRAL_REQUIRED
+  PAYMENT_REQUIRED
+}
+
+// ============================================
+// AI CONVERSATION
+// ============================================
+
+model Message {
+  id        String      @id @default(cuid())
+  caseId    String
+  role      MessageRole
+  content   String      @db.Text
+
+  // AI metadata
+  model     String?
+  tokens    Int?
+
+  // For structured intake
+  intakeStep    String?
+
+  createdAt DateTime    @default(now())
+
+  case      Case        @relation(fields: [caseId], references: [id], onDelete: Cascade)
+
+  @@index([caseId])
+  @@map("messages")
+}
+
+enum MessageRole {
+  USER
+  ASSISTANT
+  SYSTEM
+}
+
+// ============================================
+// CAUSES OF ACTION
+// ============================================
+
+model CauseOfAction {
+  id          String   @id @default(cuid())
+  caseId      String
+
+  name        String
+  description String?  @db.Text
+
+  // Legal basis
+  statute     String?
+  elements    Json?
+
+  // Assessment
+  strength    Float?
+  notes       String?  @db.Text
+
+  // SOL for this specific claim
+  solYears    Int?
+  solDeadline DateTime?
+
+  createdAt   DateTime @default(now())
+
+  case        Case     @relation(fields: [caseId], references: [id], onDelete: Cascade)
+
+  @@index([caseId])
+  @@map("causes_of_action")
+}
+
+// ============================================
+// DOCUMENTS
+// ============================================
+
+model Document {
+  id          String       @id @default(cuid())
+  caseId      String
+
+  // File info
+  filename    String
+  originalName String
+  mimeType    String
+  size        Int
+  storageKey  String
+  storageUrl  String?
+
+  // Categorization
+  category    DocumentCategory
+  description String?
+
+  // AI analysis
+  aiSummary   String?      @db.Text
+  extractedText String?    @db.Text
+  relevance   Float?
+
+  // Timestamps
+  uploadedAt  DateTime     @default(now())
+  analyzedAt  DateTime?
+
+  case        Case         @relation(fields: [caseId], references: [id], onDelete: Cascade)
+
+  @@index([caseId])
+  @@map("documents")
+}
+
+enum DocumentCategory {
+  CONTRACT
+  EMAIL
+  TEXT_MESSAGE
+  FINANCIAL
+  PHOTO_VIDEO
+  LEGAL_DOCUMENT
+  CORRESPONDENCE
+  EVIDENCE_OTHER
+  IDENTIFICATION
+  OTHER
+}
+
+// ============================================
+// ADMIN
+// ============================================
+
+model AdminComment {
+  id        String   @id @default(cuid())
+  caseId    String
+  adminId   String
+
+  content   String   @db.Text
+  isInternal Boolean @default(true)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  case      Case     @relation(fields: [caseId], references: [id], onDelete: Cascade)
+
+  @@index([caseId])
+  @@map("admin_comments")
+}
+
+// ============================================
+// ANALYTICS / EVENTS
+// ============================================
+
+model AnalyticsEvent {
+  id        String   @id @default(cuid())
+  userId    String?
+  caseId    String?
+
+  event     String
+  metadata  Json?
+
+  createdAt DateTime @default(now())
+
+  @@index([event])
+  @@index([createdAt])
+  @@map("analytics_events")
+}
+
+// ============================================
+// FEATURE GATING
+// ============================================
+
+model FeatureConfig {
+  id          String     @id @default(cuid())
+  featureKey  String     @unique
+  name        String
+  description String?
+
+  // Access control
+  isEnabled   Boolean    @default(true)
+  accessType  AccessType @default(FREE)
+  price       Float?
+
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+
+  @@map("feature_configs")
+}
+
+model UserFeatureUnlock {
+  id          String   @id @default(cuid())
+  userId      String
+  featureKey  String
+  unlockedAt  DateTime @default(now())
+  unlockedVia String
+  paymentId   String?
+
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, featureKey])
+  @@map("user_feature_unlocks")
+}
+
+// ============================================
+// CONTENT MANAGEMENT
+// ============================================
+
+enum LayoutType {
+  MARKDOWN
+  BLOCKS
+}
+
+enum PageType {
+  PAGE
+  NEWS
+}
+
+model SitePage {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
+  content     String   @db.Text
+  isPublished Boolean  @default(false)
+
+  // Page type to distinguish between static pages and news/blog posts
+  pageType    PageType @default(PAGE)
+
+  // Layout type to distinguish between markdown and block-based layouts
+  layoutType  LayoutType @default(MARKDOWN)
+
+  // Block-based content (JSON array of blocks)
+  blocks      Json?
+
+  // Published timestamp for blog posts (when first published)
+  publishedAt DateTime?
+
+  // Email publishing (Beehiiv-style multi-channel)
+  emailSubject     String?
+  emailPreviewText String?
+  canSendAsEmail   Boolean  @default(false)
+  lastEmailSentAt  DateTime?
+
+  // SEO
+  metaTitle       String?
+  metaDescription String?
+
+  // Ordering for default navigation
+  displayOrder    Int      @default(0)
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([slug])
+  @@index([isPublished])
+  @@index([pageType])
+  @@index([publishedAt])
+  @@map("site_pages")
+}
+
+model NavigationItem {
+  id          String   @id @default(cuid())
+  label       String
+  href        String
+  order       Int      @default(0)
+  isExternal  Boolean  @default(false)
+  isEnabled   Boolean  @default(true)
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([order])
+  @@map("navigation_items")
+}
+
+model SiteSettings {
+  id              String   @id @default("singleton") // Fixed ID to ensure only one record
+  siteName        String   @default("Kairav.ai")
+  tagline         String   @default("The Plaintiff Operating System")
+  description     String   @default("AI-powered case preparation for plaintiffs seeking justice.")
+
+  // Footer content
+  footerText      String?  @db.Text
+
+  // Contact information
+  contactEmail    String   @default("contact@kairav.ai")
+  supportEmail    String   @default("support@kairav.ai")
+
+  // Social media links
+  linkedinUrl     String?
+  twitterUrl      String?
+  facebookUrl     String?
+
+  // Theme customization
+  primaryColor    String?
+  accentColor     String?
+  fontFamily      String?
+  headingFont     String?
+
+  // Legal
+  companyName     String   @default("Kairav.ai")
+  copyrightYear   Int      @default(2025)
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@map("site_settings")
+}
+
+// ============================================
+// WAITLIST
+// ============================================
+
+model WaitlistEntry {
+  id              String        @id @default(cuid())
+  email           String        @unique
+
+  // Step 2 fields
+  firstName       String?
+  lastName        String?
+  interest        InterestType?
+  comments        String?       @db.Text
+
+  // Tracking
+  completedStepTwo Boolean      @default(false)
+
+  // Timestamps
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+
+  @@index([email])
+  @@index([createdAt])
+  @@map("waitlist_entries")
+}
+
+enum InterestType {
+  PLAINTIFF
+  LAWYER
+  INVESTOR
+  OTHER
+}

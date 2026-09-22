@@ -1,0 +1,779 @@
+{
+  "pages": [
+    {
+      "slug": "home",
+      "title": "The Plaintiff Operating System",
+      "pageType": "PAGE",
+      "layoutType": "BLOCKS",
+      "content": "",
+      "blocks": [
+        {
+          "id": "hero-1",
+          "type": "hero",
+          "data": {
+            "title": "The Plaintiff\nOperating System",
+            "subtitle": "AI-powered case preparation for plaintiffs seeking justice. Organize your evidence, understand your legal options, and connect with contingency law firms—all without upfront costs.",
+            "gradient": "primary",
+            "showPattern": true,
+            "buttons": [
+              { "text": "Start Your Case", "href": "/register", "variant": "primary" },
+              { "text": "Sign In", "href": "/login", "variant": "secondary" }
+            ]
+          }
+        },
+        {
+          "id": "features-1",
+          "type": "features",
+          "data": {
+            "title": "How Kairav.ai Helps You",
+            "subtitle": "Professional-grade case preparation, powered by AI",
+            "columns": 3,
+            "features": [
+              {
+                "icon": "MessageSquare",
+                "title": "AI-Guided Intake",
+                "description": "Tell your story naturally. Our AI assistant asks the right questions to understand your case completely."
+              },
+              {
+                "icon": "FileText",
+                "title": "Evidence Organization",
+                "description": "Upload and organize contracts, emails, photos, and documents. We'll help you build a compelling evidence package."
+              },
+              {
+                "icon": "BarChart3",
+                "title": "Case Scoring",
+                "description": "Get an objective assessment of your case strength across multiple dimensions including evidence, liability, and damages."
+              },
+              {
+                "icon": "CheckCircle",
+                "title": "Legal Analysis",
+                "description": "Identify potential causes of action and understand statute of limitations concerns before it's too late."
+              },
+              {
+                "icon": "Scale",
+                "title": "Law Firm Matching",
+                "description": "When you're ready, request referrals to vetted contingency law firms that handle cases like yours."
+              },
+              {
+                "icon": "FileText",
+                "title": "Litigation-Ready Packet",
+                "description": "Present attorneys with a complete, organized case file that demonstrates you're serious about seeking justice."
+              }
+            ]
+          }
+        },
+        {
+          "id": "cta-1",
+          "type": "cta",
+          "data": {
+            "title": "Ready to prepare your case?",
+            "subtitle": "Join plaintiffs who are taking control of their legal journey",
+            "gradient": "primary",
+            "buttons": [
+              { "text": "Get Started Free", "href": "/register", "variant": "secondary" }
+            ]
+          }
+        },
+        {
+          "id": "text-1",
+          "type": "text",
+          "data": {
+            "content": "**DISCLAIMER:** Kairav.ai provides legal information, not legal advice. This platform uses AI technology that can make mistakes. The information provided should not be taken as a substitute for consultation with a qualified attorney. By using this platform, you acknowledge that no attorney-client relationship is formed.",
+            "align": "center",
+            "maxWidth": "lg"
+          }
+        }
+      ],
+      "metaTitle": "Kairav.ai - The Plaintiff Operating System",
+      "metaDescription": "AI-powered case preparation for plaintiffs seeking justice. Organize evidence, understand legal options, and connect with contingency law firms.",
+      "displayOrder": 0,
+      "isPublished": true
+    },
+    {
+      "slug": "pricing",
+      "title": "Pricing",
+      "pageType": "PAGE",
+      "layoutType": "BLOCKS",
+      "content": "",
+      "blocks": [
+        {
+          "id": "hero-pricing",
+          "type": "hero",
+          "data": {
+            "title": "Simple, Transparent Pricing",
+            "subtitle": "Get started for free. Unlock premium features when you're ready to take the next step.",
+            "gradient": "primary",
+            "showPattern": true,
+            "buttons": []
+          }
+        },
+        {
+          "id": "card-grid-pricing",
+          "type": "card-grid",
+          "data": {
+            "title": "Choose Your Plan",
+            "subtitle": "All plans include AI-powered case analysis and secure document storage",
+            "columns": 3,
+            "cards": [
+              {
+                "icon": "FileText",
+                "title": "Free",
+                "description": "**$0/forever**\n\n• AI-guided case intake\n• Basic case scoring\n• Secure document upload\n• Case summary generation\n• Up to 3 cases\n• Community support",
+                "link": "/register"
+              },
+              {
+                "icon": "Zap",
+                "title": "Professional",
+                "description": "**$49/case**\n\n• Everything in Free\n• Detailed legal analysis\n• Full score breakdown\n• Causes of action analysis\n• Download case packet PDF\n• Unlimited cases\n• Priority email support",
+                "link": "/register"
+              },
+              {
+                "icon": "Scale",
+                "title": "Attorney Referral",
+                "description": "**Contingency Fee**\n\n• Everything in Professional\n• Attorney matching service\n• Direct law firm referrals\n• Case presentation assistance\n• Dedicated case manager\n• Phone support",
+                "link": "/register"
+              }
+            ]
+          }
+        },
+        {
+          "id": "features-pricing",
+          "type": "features",
+          "data": {
+            "title": "Everything You Need to Prepare Your Case",
+            "subtitle": "Professional-grade tools at an affordable price",
+            "columns": 3,
+            "features": [
+              {
+                "icon": "Brain",
+                "title": "AI-Powered Analysis",
+                "description": "Advanced AI evaluates your case across five critical dimensions to give you an objective assessment."
+              },
+              {
+                "icon": "Lock",
+                "title": "Secure & Private",
+                "description": "Bank-level encryption protects your sensitive case information and documents."
+              },
+              {
+                "icon": "FileCheck",
+                "title": "Litigation-Ready",
+                "description": "Generate professional case packets that attorneys can use immediately."
+              },
+              {
+                "icon": "Clock",
+                "title": "Statute of Limitations Tracking",
+                "description": "Never miss a critical deadline with automatic deadline calculations."
+              },
+              {
+                "icon": "Users",
+                "title": "Attorney Network",
+                "description": "Connect with vetted contingency law firms that handle cases like yours."
+              },
+              {
+                "icon": "TrendingUp",
+                "title": "Continuous Updates",
+                "description": "Regular platform improvements and new features at no additional cost."
+              }
+            ]
+          }
+        },
+        {
+          "id": "text-pricing-note",
+          "type": "text",
+          "data": {
+            "content": "## How Payment Works\n\nOur **Free** plan gives you everything you need to understand your case. When you're ready to unlock premium features like downloading your case packet or requesting attorney referrals, you can upgrade to **Professional** on a per-case basis.\n\n**Attorney Referral** is only available after you've completed your case analysis. If a law firm accepts your case on contingency, you pay nothing upfront—the attorney's fee comes from any settlement or judgment you receive.",
+            "align": "center",
+            "maxWidth": "lg"
+          }
+        },
+        {
+          "id": "cta-pricing",
+          "type": "cta",
+          "data": {
+            "title": "Ready to Get Started?",
+            "subtitle": "Create your free account and start preparing your case today",
+            "gradient": "primary",
+            "buttons": [
+              { "text": "Sign Up Free", "href": "/register", "variant": "secondary" }
+            ]
+          }
+        },
+        {
+          "id": "text-pricing-disclaimer",
+          "type": "text",
+          "data": {
+            "content": "**DISCLAIMER:** Kairav.ai provides legal information, not legal advice. Payment for premium features does not create an attorney-client relationship. Attorney referrals are to independent law firms, and any fee arrangements are between you and the attorney.",
+            "align": "center",
+            "maxWidth": "lg"
+          }
+        }
+      ],
+      "metaTitle": "Pricing - Kairav.ai",
+      "metaDescription": "Simple, transparent pricing for AI-powered case preparation. Start free, upgrade when ready.",
+      "displayOrder": 4,
+      "isPublished": true
+    },
+    {
+      "slug": "faq",
+      "title": "Frequently Asked Questions",
+      "pageType": "PAGE",
+      "layoutType": "BLOCKS",
+      "content": "",
+      "blocks": [
+        {
+          "id": "hero-faq",
+          "type": "hero",
+          "data": {
+            "title": "Frequently Asked Questions",
+            "subtitle": "Find answers to common questions about Kairav.ai and how we can help with your case",
+            "gradient": "primary",
+            "showPattern": true,
+            "buttons": []
+          }
+        },
+        {
+          "id": "faq-general",
+          "type": "faq",
+          "data": {
+            "title": "General Questions",
+            "subtitle": "Learn about Kairav.ai and what we do",
+            "faqs": [
+              {
+                "question": "What is Kairav.ai?",
+                "answer": "Kairav.ai is an AI-powered platform that helps plaintiffs prepare their legal cases. We guide you through a comprehensive case intake process, analyze your case strength, organize your evidence, and help you connect with qualified attorneys—all without requiring upfront legal fees."
+              },
+              {
+                "question": "Is Kairav.ai a law firm?",
+                "answer": "No, Kairav.ai is not a law firm and we do not provide legal advice. We are a technology platform that provides legal information and case preparation tools. When you request an attorney referral, we connect you with independent law firms who can provide legal representation."
+              },
+              {
+                "question": "How much does it cost?",
+                "answer": "Kairav.ai offers a **free plan** that includes AI-guided intake, basic case scoring, and document storage. Premium features like downloading your case packet cost $49 per case. Attorney referrals work on contingency—you pay nothing unless you win your case. See our [pricing page](/pricing) for details."
+              },
+              {
+                "question": "What types of cases do you handle?",
+                "answer": "We support various case types including breach of contract, fraud, employment disputes, personal injury, IP theft, and partnership disputes. Our AI is trained to analyze many common legal scenarios, but we're continuously expanding our capabilities."
+              },
+              {
+                "question": "How accurate is the AI case analysis?",
+                "answer": "Our AI provides a preliminary assessment based on the information you provide. While it's trained on legal principles and case law, it should not be considered a substitute for professional legal advice. The case score helps you understand potential strengths and weaknesses, but only a licensed attorney can provide definitive legal guidance."
+              }
+            ]
+          }
+        },
+        {
+          "id": "faq-process",
+          "type": "faq",
+          "data": {
+            "title": "Using the Platform",
+            "subtitle": "How to prepare your case on Kairav.ai",
+            "faqs": [
+              {
+                "question": "How does the case intake process work?",
+                "answer": "Our AI assistant guides you through a conversational intake process, asking relevant questions about your situation. You can tell your story naturally, and the AI will ask follow-up questions to gather all necessary information. The process typically takes 15-30 minutes."
+              },
+              {
+                "question": "What documents should I upload?",
+                "answer": "Upload any documents relevant to your case: contracts, emails, text messages, photos, financial records, medical records, or other evidence. Our AI can analyze documents to extract key information and strengthen your case analysis."
+              },
+              {
+                "question": "How is my case scored?",
+                "answer": "We evaluate your case across five dimensions:\n\n1. **Evidence Strength** - Quality and completeness of your documentation\n2. **Liability Clarity** - How clear the defendant's liability is\n3. **Damages Quantification** - How well damages can be calculated\n4. **Collectability** - Likelihood of collecting if you win\n5. **Statute of Limitations** - Time remaining to file\n\nEach dimension is scored 0-100, and we provide an overall assessment."
+              },
+              {
+                "question": "Can I edit my case after submission?",
+                "answer": "Yes! You can always go back and add more information, upload additional documents, or update case details. The AI will re-analyze your case with the new information."
+              },
+              {
+                "question": "How long does the analysis take?",
+                "answer": "Initial case analysis is typically completed within minutes. More detailed analysis including document review may take a bit longer, but you'll see results in real-time as the AI processes your information."
+              }
+            ]
+          }
+        },
+        {
+          "id": "faq-attorneys",
+          "type": "faq",
+          "data": {
+            "title": "Attorney Referrals",
+            "subtitle": "Connecting with legal representation",
+            "faqs": [
+              {
+                "question": "How do attorney referrals work?",
+                "answer": "After completing your case analysis, you can request a referral to attorneys in our network. We match you with law firms that handle your type of case and work on contingency. The attorney reviews your case packet and decides whether to take your case."
+              },
+              {
+                "question": "What does 'contingency fee' mean?",
+                "answer": "A contingency fee arrangement means you pay the attorney nothing upfront. The attorney only gets paid if you win your case, typically taking 33-40% of any settlement or judgment. If you don't win, you owe nothing for legal fees."
+              },
+              {
+                "question": "Are the attorneys vetted?",
+                "answer": "Yes, we only work with licensed attorneys in good standing with their state bar associations. We verify credentials and prioritize attorneys with experience in relevant practice areas."
+              },
+              {
+                "question": "What if no attorney takes my case?",
+                "answer": "If attorneys decline your case, we'll provide feedback when possible. You can use this information to strengthen your case (gather more evidence, etc.) and request another referral. You can also use your case packet to approach other attorneys independently."
+              },
+              {
+                "question": "Can I choose my attorney?",
+                "answer": "We provide referrals to firms that match your case type and location. You're free to interview multiple attorneys and choose who you feel most comfortable with. You can also use your Kairav.ai case packet when approaching any attorney."
+              }
+            ]
+          }
+        },
+        {
+          "id": "faq-privacy",
+          "type": "faq",
+          "data": {
+            "title": "Privacy & Security",
+            "subtitle": "How we protect your information",
+            "faqs": [
+              {
+                "question": "Is my information secure?",
+                "answer": "Yes, we use bank-level encryption (AES-256) to protect your data both in transit and at rest. Your case information and documents are stored securely and only accessible to you and any attorneys you choose to share with."
+              },
+              {
+                "question": "Who can see my case information?",
+                "answer": "By default, only you can see your case information. When you request an attorney referral, we share your case packet with potential attorneys. You control what information is shared and when."
+              },
+              {
+                "question": "Do you sell my data?",
+                "answer": "No, we never sell your personal information or case data to third parties. We may use anonymized, aggregated data for research and platform improvement, but your individual information remains confidential."
+              },
+              {
+                "question": "Can I delete my account and data?",
+                "answer": "Yes, you can delete your account at any time from your profile settings. This will permanently remove all your case information and documents from our servers."
+              }
+            ]
+          }
+        },
+        {
+          "id": "cta-faq",
+          "type": "cta",
+          "data": {
+            "title": "Still Have Questions?",
+            "subtitle": "Contact our support team or start preparing your case today",
+            "gradient": "primary",
+            "buttons": [
+              { "text": "Contact Support", "href": "/contact", "variant": "secondary" },
+              { "text": "Get Started Free", "href": "/register", "variant": "primary" }
+            ]
+          }
+        }
+      ],
+      "metaTitle": "FAQ - Frequently Asked Questions | Kairav.ai",
+      "metaDescription": "Find answers to common questions about Kairav.ai's AI-powered case preparation platform.",
+      "displayOrder": 5,
+      "isPublished": true
+    },
+    {
+      "slug": "how-it-works",
+      "title": "How It Works",
+      "pageType": "PAGE",
+      "layoutType": "BLOCKS",
+      "content": "",
+      "blocks": [
+        {
+          "id": "hero-how",
+          "type": "hero",
+          "data": {
+            "title": "How Kairav.ai Works",
+            "subtitle": "From case intake to attorney referral—here's how we help you prepare your legal case",
+            "gradient": "primary",
+            "showPattern": true,
+            "buttons": [
+              { "text": "Get Started Free", "href": "/register", "variant": "primary" }
+            ]
+          }
+        },
+        {
+          "id": "features-steps",
+          "type": "features",
+          "data": {
+            "title": "Your Journey to Justice",
+            "subtitle": "A step-by-step guide to using Kairav.ai",
+            "columns": 3,
+            "features": [
+              {
+                "icon": "UserPlus",
+                "title": "1. Create Your Account",
+                "description": "Sign up for free in under a minute. No credit card required. Start with our free plan to explore the platform."
+              },
+              {
+                "icon": "MessageSquare",
+                "title": "2. Tell Your Story",
+                "description": "Our AI assistant guides you through a conversational intake process. Answer questions naturally—the AI adapts based on your responses."
+              },
+              {
+                "icon": "Upload",
+                "title": "3. Upload Evidence",
+                "description": "Securely upload contracts, emails, photos, and other documents. Our AI can analyze documents to extract key information."
+              },
+              {
+                "icon": "Brain",
+                "title": "4. AI Analysis",
+                "description": "Our AI evaluates your case across five critical dimensions: evidence strength, liability clarity, damages, collectability, and statute of limitations."
+              },
+              {
+                "icon": "FileText",
+                "title": "5. Review Your Case Packet",
+                "description": "Get a comprehensive case summary, timeline, evidence inventory, and identified causes of action. Understand your case strengths and weaknesses."
+              },
+              {
+                "icon": "Scale",
+                "title": "6. Connect with Attorneys",
+                "description": "When ready, request referrals to vetted contingency law firms. Present them with your litigation-ready case packet."
+              }
+            ]
+          }
+        },
+        {
+          "id": "stats-how",
+          "type": "stats",
+          "data": {
+            "title": "By the Numbers",
+            "stats": [
+              {
+                "value": "15-30",
+                "label": "Minutes",
+                "description": "Average intake completion time"
+              },
+              {
+                "value": "5",
+                "label": "Dimensions",
+                "description": "Comprehensive case scoring"
+              },
+              {
+                "value": "100%",
+                "label": "Secure",
+                "description": "Bank-level encryption"
+              },
+              {
+                "value": "$0",
+                "label": "Upfront",
+                "description": "Start analyzing your case free"
+              }
+            ]
+          }
+        },
+        {
+          "id": "text-how-detailed",
+          "type": "text",
+          "data": {
+            "content": "## The AI-Powered Difference\n\n### Intelligent Case Intake\n\nTraditional legal intake forms are long, confusing, and often miss critical information. Our AI assistant conducts a natural conversation, asking follow-up questions based on your responses. It's like talking to a knowledgeable paralegal who knows exactly what information attorneys need.\n\n### Objective Case Scoring\n\nOur AI provides an unbiased assessment of your case strength. This helps you:\n\n- **Set realistic expectations** about potential outcomes\n- **Identify weaknesses** you can address before approaching attorneys\n- **Prioritize evidence gathering** in areas that matter most\n- **Understand statute of limitations** deadlines before it's too late\n\n### Litigation-Ready Output\n\nAttorneys are busy. When you present them with a well-organized case packet that includes:\n\n- Comprehensive case summary\n- Detailed timeline of events\n- Evidence inventory with key documents\n- Identified causes of action\n- Damages breakdown\n- Witness information\n\n...you demonstrate that you're serious about your case and make it easier for them to evaluate whether to take it on contingency.\n\n### Built for Plaintiffs\n\nUnlike generic legal tech, Kairav.ai is specifically designed for plaintiffs seeking contingency representation. We understand that you need to present a compelling case to attorneys who will only get paid if you win. Every feature is designed with this goal in mind.",
+            "align": "left",
+            "maxWidth": "lg"
+          }
+        },
+        {
+          "id": "card-grid-how",
+          "type": "card-grid",
+          "data": {
+            "title": "What You Get",
+            "subtitle": "Professional case preparation tools at your fingertips",
+            "columns": 3,
+            "cards": [
+              {
+                "icon": "FileCheck",
+                "title": "Case Summary",
+                "description": "AI-generated professional summary of your case, highlighting key facts and legal issues."
+              },
+              {
+                "icon": "Calendar",
+                "title": "Timeline",
+                "description": "Chronological timeline of events with key dates and statute of limitations calculations."
+              },
+              {
+                "icon": "FolderOpen",
+                "title": "Evidence Inventory",
+                "description": "Organized catalog of all documents and evidence with relevance assessments."
+              },
+              {
+                "icon": "Scale",
+                "title": "Causes of Action",
+                "description": "Identified legal claims with strength assessments and required elements."
+              },
+              {
+                "icon": "DollarSign",
+                "title": "Damages Analysis",
+                "description": "Breakdown of economic and non-economic damages with supporting documentation."
+              },
+              {
+                "icon": "AlertTriangle",
+                "title": "Risk Assessment",
+                "description": "Identification of potential challenges and weaknesses in your case."
+              }
+            ]
+          }
+        },
+        {
+          "id": "cta-how",
+          "type": "cta",
+          "data": {
+            "title": "Ready to Prepare Your Case?",
+            "subtitle": "Join plaintiffs who are taking control of their legal journey",
+            "gradient": "primary",
+            "buttons": [
+              { "text": "Start Free Today", "href": "/register", "variant": "secondary" },
+              { "text": "View Pricing", "href": "/pricing", "variant": "primary" }
+            ]
+          }
+        },
+        {
+          "id": "text-how-disclaimer",
+          "type": "text",
+          "data": {
+            "content": "**DISCLAIMER:** Kairav.ai provides legal information, not legal advice. This platform uses AI technology that can make mistakes. The information provided should not be taken as a substitute for consultation with a qualified attorney. By using this platform, you acknowledge that no attorney-client relationship is formed.",
+            "align": "center",
+            "maxWidth": "lg"
+          }
+        }
+      ],
+      "metaTitle": "How It Works - AI-Powered Case Preparation | Kairav.ai",
+      "metaDescription": "Learn how Kairav.ai uses AI to help you prepare your legal case, from intake to attorney referral.",
+      "displayOrder": 6,
+      "isPublished": true
+    },
+    {
+      "slug": "about",
+      "title": "About Kairav.ai",
+      "pageType": "PAGE",
+      "layoutType": "MARKDOWN",
+      "content": "# About Kairav.ai\n\nKairav.ai is revolutionizing the way plaintiffs and attorneys connect. Our AI-powered platform helps individuals understand their legal cases and connects them with qualified attorneys.\n\n## Our Mission\n\nWe believe that everyone deserves access to quality legal representation. By leveraging artificial intelligence, we make it easier for plaintiffs to understand their cases and find the right attorney to represent them.\n\n## How It Works\n\n1. **Case Intake**: Our AI assistant guides you through a comprehensive intake process\n2. **Analysis**: Advanced algorithms analyze your case strength and potential\n3. **Matching**: We connect you with attorneys who specialize in your type of case\n4. **Support**: Get ongoing support throughout your legal journey\n\n## Contact Us\n\nHave questions? Reach out to us at support@kairav.ai",
+      "blocks": [],
+      "metaTitle": "About Kairav.ai - AI-Powered Legal Case Analysis",
+      "metaDescription": "Learn about Kairav.ai's mission to connect plaintiffs with qualified attorneys using AI-powered case analysis.",
+      "displayOrder": 1,
+      "isPublished": true
+    },
+    {
+      "slug": "contact",
+      "title": "Contact Us",
+      "pageType": "PAGE",
+      "layoutType": "MARKDOWN",
+      "content": "# Contact Us\n\nWe'd love to hear from you! Whether you have questions about our platform, need support, or want to learn more about how we can help with your case.\n\n## Get In Touch\n\n**Email**: support@kairav.ai\n\n**Hours**: Monday - Friday, 9am - 5pm PST\n\n## For Attorneys\n\nInterested in joining our network? Email us at attorneys@kairav.ai\n\n## Support\n\nNeed help with your case? Our support team is here to assist you. Log in to your dashboard and use the help section, or email us directly.",
+      "blocks": [],
+      "metaTitle": "Contact Kairav.ai - Get in Touch",
+      "metaDescription": "Contact Kairav.ai for support, questions, or to learn more about our AI-powered legal platform.",
+      "displayOrder": 2,
+      "isPublished": true
+    },
+    {
+      "slug": "mission",
+      "title": "Our Mission",
+      "pageType": "PAGE",
+      "layoutType": "MARKDOWN",
+      "content": "# Our Mission\n\nAt Kairav.ai, we're on a mission to democratize access to legal representation and make the justice system more accessible to everyone.\n\n## The Problem\n\nMany individuals with valid legal claims never pursue them because:\n- They don't know if their case has merit\n- They can't afford expensive consultations\n- They don't know how to find the right attorney\n- The legal process seems overwhelming\n\n## Our Solution\n\nWe use artificial intelligence to:\n- Provide instant case analysis and scoring\n- Help plaintiffs understand their legal options\n- Connect them with specialized attorneys\n- Make the legal process transparent and accessible\n\n## Our Values\n\n**Accessibility**: Legal help should be available to everyone, not just those who can afford expensive consultations.\n\n**Transparency**: We believe in clear, honest communication about case strength and potential outcomes.\n\n**Innovation**: We leverage cutting-edge AI technology to improve the legal intake process.\n\n**Integrity**: We're committed to ethical practices and protecting user privacy.\n\n## Join Us\n\nWhether you're a plaintiff seeking justice or an attorney looking to grow your practice, we invite you to join the Kairav.ai community.",
+      "blocks": [],
+      "metaTitle": "Our Mission - Democratizing Legal Access | Kairav.ai",
+      "metaDescription": "Kairav.ai's mission is to democratize access to legal representation using AI technology to help plaintiffs understand their cases.",
+      "displayOrder": 3,
+      "isPublished": true
+    },
+    {
+      "slug": "privacy",
+      "title": "Privacy Policy",
+      "pageType": "PAGE",
+      "layoutType": "MARKDOWN",
+      "content": "# Privacy Policy\n\n**Last Updated:** January 2025\n\nYour privacy is important to us. This Privacy Policy explains how Kairav.ai collects, uses, and protects your personal information.\n\n## 1. INFORMATION WE COLLECT\n\n### Account Information\n\nWhen you create an account, we collect:\n\n- Name\n- Email address\n- State of residence\n- Password (encrypted)\n\n### Case Information\n\nWhen you use our platform to prepare your case, we collect:\n\n- Case details and descriptions you provide\n- Timeline information and key dates\n- Information about parties involved\n- Estimated damages and financial information\n- Documents you upload\n- Communications with our AI assistant\n\n### Automatically Collected Information\n\nWe automatically collect:\n\n- IP address and device information\n- Browser type and version\n- Usage patterns and feature interactions\n- Log data and analytics\n\n## 2. HOW WE USE YOUR INFORMATION\n\nWe use your information to:\n\n- Provide and improve our case preparation services\n- Generate AI-powered case analysis and scoring\n- Facilitate law firm referrals (with your explicit consent)\n- Send you important updates about your account and cases\n- Respond to your support requests\n- Detect and prevent fraud or abuse\n- Comply with legal obligations\n- Improve our AI models and platform features\n\n## 3. DATA STORAGE AND SECURITY\n\nWe take data security seriously:\n\n- All data is encrypted in transit using TLS/SSL\n- Data at rest is encrypted using industry-standard encryption\n- Documents are stored securely in isolated cloud storage\n- Access to your data is restricted to authorized personnel only\n- We regularly review and update our security practices\n- Passwords are hashed using bcrypt with salt\n\nHowever, no method of transmission or storage is 100% secure. While we strive to protect your information, we cannot guarantee absolute security.\n\n## 4. DATA SHARING\n\nWe share your information only in the following circumstances:\n\n### With Law Firms (Your Consent Required)\n\nWhen you explicitly request a referral, we share your case information with partner law firms. This includes:\n\n- Your name and contact information\n- Complete case details and timeline\n- Uploaded documents\n- AI-generated analysis and scores\n\n### With Service Providers\n\nWe work with trusted third-party service providers who help us operate the platform:\n\n- Cloud hosting providers (for infrastructure)\n- AI model providers (for case analysis)\n- Analytics services (to improve our platform)\n\nThese providers are contractually obligated to protect your data and use it only for providing services to us.\n\n### As Required by Law\n\nWe may disclose your information if required by:\n\n- Valid legal process (subpoena, court order)\n- Government or regulatory requirements\n- Protection of our rights or safety\n- Investigation of fraud or security issues\n\n## 5. YOUR RIGHTS\n\nYou have the following rights regarding your data:\n\n### Access Your Data\n\nYou can access and review your account information and case data at any time through your dashboard.\n\n### Delete Your Data\n\nYou can request deletion of your account and all associated data. Note that:\n\n- Deletion is permanent and cannot be undone\n- Some data may be retained for legal compliance\n- Data already shared with law firms cannot be recalled\n\n### Export Your Data\n\nYou can request a copy of your case information in a portable format.\n\n### Opt Out of Communications\n\nYou can unsubscribe from marketing emails at any time. Note that we will still send you essential account and case-related communications.\n\n## 6. COOKIES AND TRACKING\n\nWe use cookies and similar technologies to:\n\n- Keep you logged in\n- Remember your preferences\n- Understand how you use our platform\n- Improve our services\n\nYou can control cookies through your browser settings, but some features may not work properly if you disable them.\n\n## 7. DATA RETENTION\n\nWe retain your information:\n\n- For as long as your account is active\n- As needed to provide you services\n- To comply with legal obligations\n- To resolve disputes and enforce agreements\n\nWhen you delete your account, we will delete or anonymize your data within 90 days, except where retention is required by law.\n\n## 8. CHILDREN'S PRIVACY\n\nOur platform is not intended for users under 18 years of age. We do not knowingly collect information from children. If you believe we have collected information from a child, please contact us immediately.\n\n## 9. INTERNATIONAL USERS\n\nOur platform is operated in the United States. If you are accessing from outside the US, your information will be transferred to and processed in the United States, which may have different data protection laws than your country.\n\n## 10. CHANGES TO THIS POLICY\n\nWe may update this Privacy Policy from time to time. We will notify you of significant changes by email or through a prominent notice on our platform. Your continued use after changes indicates acceptance of the updated policy.\n\n## 11. CONTACT US\n\nIf you have questions about this Privacy Policy or want to exercise your rights, contact us at:\n\nEmail: privacy@kairav.ai\n\n---\n\n**Important:** This Privacy Policy should be reviewed by a qualified attorney before public launch to ensure compliance with GDPR, CCPA, and other applicable privacy laws.",
+      "blocks": [],
+      "metaTitle": "Privacy Policy - Kairav.ai",
+      "metaDescription": "Learn how Kairav.ai collects, uses, and protects your personal information.",
+      "displayOrder": 8,
+      "isPublished": true
+    },
+    {
+      "slug": "terms",
+      "title": "Terms of Service",
+      "pageType": "PAGE",
+      "layoutType": "MARKDOWN",
+      "content": "# Terms of Service\n\n**Last Updated:** January 2025\n\n## 1. ACCEPTANCE OF TERMS\n\nBy accessing or using Kairav.ai (\"Platform\", \"Service\", \"we\", \"us\", or \"our\"), you agree to be bound by these Terms of Service (\"Terms\"). If you do not agree to these Terms, do not use the Platform.\n\nThese Terms constitute a legally binding agreement between you and Kairav.ai. We reserve the right to modify these Terms at any time, and your continued use of the Platform constitutes acceptance of any changes.\n\n## 2. DESCRIPTION OF SERVICE\n\nKairav.ai provides AI-powered legal information and case preparation tools designed to help plaintiffs organize their legal cases and connect with contingency law firms.\n\n**WE DO NOT PROVIDE LEGAL ADVICE.** We are not a law firm and do not provide attorney services or legal representation.\n\nThe Platform uses artificial intelligence technology to assist with case organization, document management, and information gathering. All information provided by the Platform is for informational purposes only and should not be construed as legal advice.\n\n## 3. NO ATTORNEY-CLIENT RELATIONSHIP\n\nUse of this Platform does not create an attorney-client relationship between you and Kairav.ai or any of its employees, contractors, or affiliates.\n\nCommunications through this Platform are NOT protected by attorney-client privilege. Do not share information that you would only share with an attorney in a privileged setting.\n\nIf you require legal advice, you should consult with a licensed attorney in your jurisdiction. The Platform may facilitate introductions to attorneys, but any attorney-client relationship would be between you and that attorney, not with Kairav.ai.\n\n## 4. USER RESPONSIBILITIES\n\nAs a user of the Platform, you agree to:\n\n- Provide accurate and truthful information\n- Understand that AI technology can make mistakes and should not be solely relied upon\n- Consult with a licensed attorney before taking any legal action\n- Not use the Platform for any illegal or unauthorized purpose\n- Maintain the confidentiality of your account credentials\n- Not attempt to gain unauthorized access to the Platform or other users' accounts\n- Not upload malicious code, viruses, or harmful content\n- Comply with all applicable laws and regulations\n\n## 5. DATA SHARING AND REFERRALS\n\nBy requesting a law firm referral through the Platform, you explicitly consent to sharing your case information with partner law firms. This information may include:\n\n- Your case summary and timeline\n- Identified causes of action\n- Evidence documents you have uploaded\n- AI-generated case analysis and scoring\n- Your contact information\n\nPartner law firms will review your information to determine if they can assist with your case. You are under no obligation to work with any law firm that contacts you.\n\nWe carefully vet our partner law firms, but we do not guarantee their services or results. Any agreement you enter into with a law firm is between you and that firm.\n\n## 6. INTELLECTUAL PROPERTY\n\nAll content, features, and functionality of the Platform, including but not limited to text, graphics, logos, software, and AI models, are owned by Kairav.ai and are protected by copyright, trademark, and other intellectual property laws.\n\nYou retain ownership of any content you upload to the Platform, but you grant us a license to use, store, and process that content to provide our services.\n\n## 7. LIMITATION OF LIABILITY\n\nTO THE MAXIMUM EXTENT PERMITTED BY LAW, KAIRAV.AI SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER INCURRED DIRECTLY OR INDIRECTLY, OR ANY LOSS OF DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES.\n\nWE DO NOT GUARANTEE THE ACCURACY, COMPLETENESS, OR USEFULNESS OF ANY INFORMATION PROVIDED BY THE PLATFORM OR ITS AI SYSTEMS. AI TECHNOLOGY CAN MAKE ERRORS.\n\nYOUR USE OF THE PLATFORM IS AT YOUR OWN RISK. THE PLATFORM IS PROVIDED \"AS IS\" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED.\n\n## 8. DISPUTE RESOLUTION\n\nAny dispute arising out of or relating to these Terms or the Platform shall be resolved through binding arbitration in accordance with the American Arbitration Association's rules, except that either party may seek injunctive relief in court.\n\nYou waive any right to participate in a class action lawsuit or class-wide arbitration.\n\n## 9. TERMINATION\n\nWe reserve the right to suspend or terminate your access to the Platform at any time, with or without cause, with or without notice.\n\nUpon termination, your right to use the Platform will immediately cease. You may request deletion of your data in accordance with our Privacy Policy.\n\n## 10. GOVERNING LAW\n\nThese Terms shall be governed by and construed in accordance with the laws of the State of Delaware, without regard to its conflict of law provisions.\n\n## 11. CONTACT INFORMATION\n\nIf you have questions about these Terms, please contact us at: legal@kairav.ai\n\n---\n\n**Important:** These Terms of Service should be reviewed by a qualified attorney before public launch to ensure adequate legal protection and compliance with applicable laws.",
+      "blocks": [],
+      "metaTitle": "Terms of Service - Kairav.ai",
+      "metaDescription": "Terms of Service for using Kairav.ai's AI-powered case preparation platform.",
+      "displayOrder": 9,
+      "isPublished": true
+    },
+    {
+      "slug": "help",
+      "title": "Help & Support",
+      "pageType": "PAGE",
+      "layoutType": "BLOCKS",
+      "content": "",
+      "blocks": [
+        {
+          "id": "hero-help",
+          "type": "hero",
+          "data": {
+            "title": "Help & Support",
+            "subtitle": "Everything you need to know about using Kairav.ai",
+            "gradient": "primary",
+            "showPattern": true,
+            "buttons": []
+          }
+        },
+        {
+          "id": "faq-general",
+          "type": "faq",
+          "data": {
+            "title": "General Questions",
+            "subtitle": "Learn about Kairav.ai and what we do",
+            "faqs": [
+              {
+                "question": "What is Kairav.ai?",
+                "answer": "Kairav.ai is an AI-powered platform that helps plaintiffs prepare their legal cases. We guide you through a comprehensive case intake process, analyze your case strength, organize your evidence, and help you connect with qualified attorneys—all without requiring upfront legal fees."
+              },
+              {
+                "question": "Is Kairav.ai a law firm?",
+                "answer": "No, Kairav.ai is not a law firm and we do not provide legal advice. We are a technology platform that provides legal information and case preparation tools. When you request an attorney referral, we connect you with independent law firms who can provide legal representation."
+              },
+              {
+                "question": "How much does it cost?",
+                "answer": "Kairav.ai offers a **free plan** that includes AI-guided intake, basic case scoring, and document storage. Premium features like downloading your case packet cost $49 per case. Attorney referrals work on contingency—you pay nothing unless you win your case. See our [pricing page](/pricing) for details."
+              },
+              {
+                "question": "What types of cases do you handle?",
+                "answer": "We support various case types including breach of contract, fraud, employment disputes, personal injury, IP theft, and partnership disputes. Our AI is trained to analyze many common legal scenarios, but we're continuously expanding our capabilities."
+              },
+              {
+                "question": "How accurate is the AI case analysis?",
+                "answer": "Our AI provides a preliminary assessment based on the information you provide. While it's trained on legal principles and case law, it should not be considered a substitute for professional legal advice. The case score helps you understand potential strengths and weaknesses, but only a licensed attorney can provide definitive legal guidance."
+              }
+            ]
+          }
+        },
+        {
+          "id": "faq-process",
+          "type": "faq",
+          "data": {
+            "title": "Using the Platform",
+            "subtitle": "How to prepare your case on Kairav.ai",
+            "faqs": [
+              {
+                "question": "How does the case intake process work?",
+                "answer": "Our AI assistant guides you through a conversational intake process, asking relevant questions about your situation. You can tell your story naturally, and the AI will ask follow-up questions to gather all necessary information. The process typically takes 15-30 minutes."
+              },
+              {
+                "question": "What documents should I upload?",
+                "answer": "Upload any documents relevant to your case: contracts, emails, text messages, photos, financial records, medical records, or other evidence. Our AI can analyze documents to extract key information and strengthen your case analysis."
+              },
+              {
+                "question": "How is my case scored?",
+                "answer": "We evaluate your case across five dimensions:\n\n1. **Evidence Strength** - Quality and completeness of your documentation\n2. **Liability Clarity** - How clear the defendant's liability is\n3. **Damages Quantification** - How well damages can be calculated\n4. **Collectability** - Likelihood of collecting if you win\n5. **Statute of Limitations** - Time remaining to file\n\nEach dimension is scored 0-100, and we provide an overall assessment."
+              },
+              {
+                "question": "Can I edit my case after submission?",
+                "answer": "Yes! You can always go back and add more information, upload additional documents, or update case details. The AI will re-analyze your case with the new information."
+              },
+              {
+                "question": "How long does the analysis take?",
+                "answer": "Initial case analysis is typically completed within minutes. More detailed analysis including document review may take a bit longer, but you'll see results in real-time as the AI processes your information."
+              }
+            ]
+          }
+        },
+        {
+          "id": "faq-attorneys",
+          "type": "faq",
+          "data": {
+            "title": "Attorney Referrals",
+            "subtitle": "Connecting with legal representation",
+            "faqs": [
+              {
+                "question": "How do attorney referrals work?",
+                "answer": "After completing your case analysis, you can request a referral to attorneys in our network. We match you with law firms that handle your type of case and work on contingency. The attorney reviews your case packet and decides whether to take your case."
+              },
+              {
+                "question": "What does 'contingency fee' mean?",
+                "answer": "A contingency fee arrangement means you pay the attorney nothing upfront. The attorney only gets paid if you win your case, typically taking 33-40% of any settlement or judgment. If you don't win, you owe nothing for legal fees."
+              },
+              {
+                "question": "Are the attorneys vetted?",
+                "answer": "Yes, we only work with licensed attorneys in good standing with their state bar associations. We verify credentials and prioritize attorneys with experience in relevant practice areas."
+              },
+              {
+                "question": "What if no attorney takes my case?",
+                "answer": "If attorneys decline your case, we'll provide feedback when possible. You can use this information to strengthen your case (gather more evidence, etc.) and request another referral. You can also use your case packet to approach other attorneys independently."
+              },
+              {
+                "question": "Can I choose my attorney?",
+                "answer": "We provide referrals to firms that match your case type and location. You're free to interview multiple attorneys and choose who you feel most comfortable with. You can also use your Kairav.ai case packet when approaching any attorney."
+              }
+            ]
+          }
+        },
+        {
+          "id": "faq-privacy",
+          "type": "faq",
+          "data": {
+            "title": "Privacy & Security",
+            "subtitle": "How we protect your information",
+            "faqs": [
+              {
+                "question": "Is my information secure?",
+                "answer": "Yes, we use bank-level encryption (AES-256) to protect your data both in transit and at rest. Your case information and documents are stored securely and only accessible to you and any attorneys you choose to share with."
+              },
+              {
+                "question": "Who can see my case information?",
+                "answer": "By default, only you can see your case information. When you request an attorney referral, we share your case packet with potential attorneys. You control what information is shared and when."
+              },
+              {
+                "question": "Do you sell my data?",
+                "answer": "No, we never sell your personal information or case data to third parties. We may use anonymized, aggregated data for research and platform improvement, but your individual information remains confidential."
+              },
+              {
+                "question": "Can I delete my account and data?",
+                "answer": "Yes, you can delete your account at any time from your profile settings. This will permanently remove all your case information and documents from our servers."
+              }
+            ]
+          }
+        },
+        {
+          "id": "cta-help",
+          "type": "cta",
+          "data": {
+            "title": "Still Have Questions?",
+            "subtitle": "Contact our support team or start preparing your case today",
+            "gradient": "primary",
+            "buttons": [
+              { "text": "Contact Support", "href": "/contact", "variant": "secondary" },
+              { "text": "Get Started Free", "href": "/register", "variant": "primary" }
+            ]
+          }
+        }
+      ],
+      "metaTitle": "Help & Support - Kairav.ai",
+      "metaDescription": "Get help using Kairav.ai's AI-powered case preparation platform. Find answers to common questions.",
+      "displayOrder": 10,
+      "isPublished": true
+    }
+  ],
+  "blogPosts": [
+    {
+      "slug": "welcome-to-kairav",
+      "title": "Welcome to Kairav.ai: Revolutionizing Legal Case Analysis",
+      "pageType": "NEWS",
+      "layoutType": "MARKDOWN",
+      "content": "# Welcome to Kairav.ai\n\nWe're excited to announce the launch of Kairav.ai, a groundbreaking platform that uses artificial intelligence to help plaintiffs understand their legal cases and connect with qualified attorneys.\n\n## Why We Built Kairav.ai\n\nEvery year, countless individuals with valid legal claims never pursue justice because they:\n- Don't know if their case has merit\n- Can't afford expensive initial consultations\n- Don't know where to find the right attorney\n- Feel overwhelmed by the legal process\n\nWe built Kairav.ai to solve these problems.\n\n## How It Works\n\nOur AI-powered platform guides you through a comprehensive case intake process, analyzes the strength of your case across multiple dimensions, and helps you understand your legal options.\n\n### Key Features\n\n- **Intelligent Case Analysis**: Our AI evaluates your case across five key dimensions\n- **Document Management**: Securely upload and organize case-related documents\n- **Attorney Matching**: Connect with attorneys who specialize in your type of case\n- **Transparent Scoring**: Understand your case strength with clear, detailed metrics\n\n## Get Started Today\n\nReady to explore your legal options? [Sign up now](/register) and get started with your free case analysis.\n\n---\n\n*Have questions? [Contact us](/contact) - we're here to help!*",
+      "blocks": [],
+      "metaTitle": "Welcome to Kairav.ai - AI-Powered Legal Case Analysis",
+      "metaDescription": "Introducing Kairav.ai: A revolutionary platform that uses AI to help plaintiffs understand their legal cases and connect with attorneys.",
+      "displayOrder": 0,
+      "isPublished": true,
+      "publishedAt": "2025-01-15T00:00:00.000Z"
+    },
+    {
+      "slug": "understanding-case-scoring",
+      "title": "Understanding Your Case Score: A Guide",
+      "pageType": "NEWS",
+      "layoutType": "MARKDOWN",
+      "content": "# Understanding Your Case Score\n\nOne of Kairav.ai's most powerful features is our comprehensive case scoring system. But what do these scores actually mean? Let's break it down.\n\n## The Five Dimensions\n\nWe evaluate every case across five critical dimensions:\n\n### 1. Evidence Strength (0-100)\nHow strong is your evidence? This considers:\n- Documentation quality\n- Witness availability\n- Physical evidence\n- Digital records\n\n### 2. Liability Clarity (0-100)\nHow clear is the defendant's liability? We assess:\n- Breach of duty\n- Causation\n- Legal precedents\n- Contractual obligations\n\n### 3. Damages Quantification (0-100)\nHow well can damages be quantified? This includes:\n- Economic losses\n- Medical expenses\n- Lost wages\n- Pain and suffering\n\n### 4. Collectability (0-100)\nCan you actually collect if you win? We evaluate:\n- Defendant's financial status\n- Asset availability\n- Insurance coverage\n- Bankruptcy risk\n\n### 5. Statute of Limitations Risk (0-100)\nHow much time do you have? We calculate:\n- Applicable deadlines\n- Discovery rule considerations\n- Tolling factors\n- Filing urgency\n\n## What Your Score Means\n\n**76-100**: Strong case with excellent prospects\n**51-75**: Moderate case with good potential\n**0-50**: Challenging case that may need more evidence\n\n## Next Steps\n\nUnderstanding your score is just the beginning. Use it to:\n- Identify areas to strengthen your case\n- Prioritize evidence gathering\n- Make informed decisions about legal representation\n- Set realistic expectations\n\nReady to get your case scored? [Start your analysis now](/register).",
+      "blocks": [],
+      "metaTitle": "Understanding Case Scores - How Kairav.ai Evaluates Your Legal Case",
+      "metaDescription": "Learn how Kairav.ai's AI-powered case scoring system evaluates your legal case across five critical dimensions.",
+      "displayOrder": 0,
+      "isPublished": true,
+      "publishedAt": "2025-01-20T00:00:00.000Z"
+    }
+  ]
+}

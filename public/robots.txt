@@ -1,0 +1,20 @@
+# Allow all crawlers
+User-agent: *
+
+# Disallow admin pages
+Disallow: /admin/
+Disallow: /admin
+
+# Disallow API endpoints
+Disallow: /api/
+Disallow: /trpc/
+
+# Disallow authentication callback pages
+Disallow: /verify-email
+Disallow: /reset-password
+
+# Allow everything else
+Allow: /
+
+# Sitemap location
+Sitemap: https://kairav.ai/sitemap.xml
